@@ -1,4 +1,6 @@
 require 'pry'
+require 'simplecov'
+SimpleCov.start
 require File.join(__dir__, '../gilded_rose')
 
 describe GildedRose do
@@ -27,9 +29,9 @@ describe GildedRose do
       context 'sell in date is due' do
         let(:item) { Item.new('Aged Brie', 0, 42) }
 
-        xit do
+        it do
           update
-          expect(item.quality).to eq 43
+          expect(item.quality).to eq 44
         end
       end
     end
